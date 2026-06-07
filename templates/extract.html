@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Content Extractor</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #121212; color: #f1f1f1; }
+        h2 { margin-bottom: 10px; }
+        p { background-color: #1f1f1f; padding: 15px; border-radius: 5px; }
+        a { color: #1E90FF; }
+    </style>
+</head>
+<body>
+<h2>Content from: {{ url }}</h2>
+
+<h3>Summary:</h3>
+<p>{{ summary }}</p>
+
+<h3>Full Content:</h3>
+<p>{{ full_content }}</p>
+
+<a href="/">Back to search</a>
+</body>
+</html>

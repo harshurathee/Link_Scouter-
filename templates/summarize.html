@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LinkScout - Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Text Summarizer 📝</h1>
+
+    <form method="POST">
+        <textarea name="text" rows="10" cols="80" placeholder="Paste your text here...">{{ original_text }}</textarea><br>
+        <button type="submit">Summarize</button>
+    </form>
+
+    {% if summary %}
+    <h2>Summary:</h2>
+    <p>{{ summary }}</p>
+    {% endif %}
+
+    <hr>
+    <a href="/">Back to Search</a>
+</body>
+</html>

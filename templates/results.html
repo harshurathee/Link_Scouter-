@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkScout Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Results for "{{ query }}"</h1>
+        <a href="{{ url_for('index') }}">← New Search</a>
+        <ul>
+            {% for result in results %}
+            <li>
+                <a href="https://{{ result.domain }}" target="_blank">{{ result.domain }}</a>
+                <span>★{{ result.rating }}</span>
+                <span>({{ result.visits }} visits)</span>
+                <span>[{{ result.popularity }}]</span>
+                <p>{{ result.snippet }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
